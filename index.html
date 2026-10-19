@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AV Develop – Developerské projekty na jižní Moravě</title>
+  <meta name="description" content="AV Develop (Amici vinum s.r.o.) je brněnský developer rodinného bydlení. Stavíme moderní domy v lokalitách s příběhem — Brod nad Dyjí, Říčany u Brna.">
+  <script>document.documentElement.classList.add('html-js');</script>
+
+  <!-- TODO: po nasazení potvrdit doménu (canonical + OG URL) -->
+  <link rel="canonical" href="https://avdevelop.cz/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="AV Develop">
+  <meta property="og:title" content="AV Develop – Developerské projekty na jižní Moravě">
+  <meta property="og:description" content="Brněnský developer rodinného bydlení. Stavíme moderní domy v lokalitách s příběhem.">
+  <meta property="og:url" content="https://avdevelop.cz/">
+  <meta property="og:image" content="https://avdevelop.cz/assets/img/og/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- přednačtení prvního slidu; ostatní přednačítá main.js po načtení stránky -->
+  <link rel="preload" as="image" href="assets/img/chaloupky/hero-1920.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..620&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://avdevelop.cz/#organizace",
+    "name": "Amici vinum s.r.o.",
+    "alternateName": ["AV Develop", "Amici vinum"],
+    "description": "Brněnská developerská společnost. Pod značkou AV Develop staví rezidenční projekty na jižní Moravě — rodinné domy v Brodu nad Dyjí a řadové domy v Říčanech u Brna.",
+    "brand": {
+      "@type": "Brand",
+      "name": "AV Develop"
+    },
+    "url": "https://avdevelop.cz/",
+    "logo": "https://avdevelop.cz/assets/img/logo/logo-color.svg",
+    "email": "Jakub.Kubik@avdevelop.cz",
+    "vatID": "CZ22200100",
+    "identifier": "22200100",
+    "foundingDate": "2024",
+    "member": [
+      { "@type": "Person", "name": "Mgr. Radovan Vrbka", "jobTitle": "jednatel" },
+      { "@type": "Person", "name": "Ing. Jakub Kubík", "jobTitle": "jednatel" }
+    ],
+    "subOrganization": [
+      { "@type": "Organization", "name": "Amici vinum servisní s.r.o.", "description": "Servisní společnost skupiny Amici vinum — příprava a řízení projektů." },
+      { "@type": "Organization", "name": "Rezidence V Chaloupkách s.r.o.", "description": "Projektová společnost — investor projektu Rezidence V Chaloupkách v Brně-Komíně." },
+      { "@type": "Organization", "name": "MASNÁ - SPV s.r.o.", "identifier": "24049492", "description": "Projektová společnost — investor projektu Masná v Brně." }
+    ],
+    "areaServed": "Jihomoravský kraj",
+    "knowsAbout": ["developerské projekty", "rezidenční výstavba", "rodinné domy", "jižní Morava"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rašínova 103/2",
+      "addressLocality": "Brno",
+      "postalCode": "602 00",
+      "addressCountry": "CZ"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="#" aria-label="AV Develop – úvod">
+        <img class="logo-white" src="assets/img/logo/logo-white.svg" alt="AV Develop" width="68" height="68">
+        <img class="logo-color" src="assets/img/logo/logo-color.svg" alt="" width="68" height="68" aria-hidden="true">
+      </a>
+      <nav class="nav__links" aria-label="Hlavní navigace">
+        <a href="#projekty">Projekty</a>
+        <a href="#skupina">Skupina</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn btn--primary" href="mailto:Jakub.Kubik@avdevelop.cz">Napište nám</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navOverlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__overlay" id="navOverlay">
+      <a href="#projekty">Projekty</a>
+      <a href="#skupina">Skupina</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="mailto:Jakub.Kubik@avdevelop.cz">Napište nám</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO SLIDER — rotující projekty ============ -->
+    <section class="slider" id="heroSlider" aria-roledescription="carousel" aria-label="Naše projekty">
+      <h1 class="sr-only">AV Develop – developerské projekty skupiny Amici vinum na jižní Moravě</h1>
+
+      <article class="hero slide is-active">
+        <div class="hero__bg" style="background-image: url('assets/img/chaloupky/hero-1920.jpg')" role="img" aria-label="Vizualizace bytových vil Rezidence V Chaloupkách"></div>
+        <div class="hero__scrim"></div>
+        <div class="container hero__content">
+          <span class="eyebrow">Připravujeme · Brno-Komín</span>
+          <h2 class="h1 hero__title"><a href="rezidence-v-chaloupkach.html">Rezidence V&nbsp;Chaloupkách</a></h2>
+          <p class="hero__lead">Bytové vily se&nbsp;zelenými střechami a&nbsp;terasami v&nbsp;brněnském Komíně.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="rezidence-v-chaloupkach.html">Prohlédnout projekt <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="hero slide">
+        <div class="hero__bg" style="background-image: url('assets/img/masna/hero-1920.jpg')" role="img" aria-label="Pracovní vizualizace interiéru bytu v projektu Masná, Brno"></div>
+        <div class="hero__scrim"></div>
+        <div class="container hero__content">
+          <span class="eyebrow">Připravujeme · Brno</span>
+          <h2 class="h1 hero__title"><a href="masna.html">Masná</a></h2>
+          <p class="hero__lead">Kompaktní jednotky 1+kk a&nbsp;ateliéry pár minut od&nbsp;centra Brna — ideální pro investici.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="masna.html">Prohlédnout projekt <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="hero slide">
+        <div class="hero__bg" style="background-image: url('assets/img/brod/uvod-1920.jpg')" role="img" aria-label="Letecký pohled na rodinné domy v Brodu nad Dyjí u vodní nádrže Nové Mlýny"></div>
+        <div class="hero__scrim"></div>
+        <div class="container hero__content">
+          <span class="eyebrow">Dokončený projekt · Vyprodáno</span>
+          <h2 class="h1 hero__title"><a href="brod-nad-dyji.html">Brod nad Dyjí</a></h2>
+          <p class="hero__lead">Rodinné domy mezi vinicemi a&nbsp;Novými Mlýny, s&nbsp;Pálavou na&nbsp;obzoru.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="brod-nad-dyji.html">Prohlédnout projekt <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="hero slide">
+        <div class="hero__bg" style="background-image: url('assets/img/ricany/hero-1920.jpg')" role="img" aria-label="Řadové rodinné domy s dřevěnými slunolamy v Říčanech u Brna"></div>
+        <div class="hero__scrim"></div>
+        <div class="container hero__content">
+          <span class="eyebrow">Dokončený projekt · Vyprodáno</span>
+          <h2 class="h1 hero__title"><a href="ricany-u-brna.html">Říčany u Brna</a></h2>
+          <p class="hero__lead">Řadové domy se&nbsp;zahradami a&nbsp;garážemi, patnáct minut od&nbsp;Brna.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="ricany-u-brna.html">Prohlédnout projekt <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="slider__nav">
+        <div class="container slider__tabs">
+          <button class="slider__tab is-active" type="button" aria-label="Zobrazit projekt Rezidence V Chaloupkách">
+            <span class="slider__num">01</span> V Chaloupkách
+            <span class="slider__bar" aria-hidden="true"></span>
+          </button>
+          <button class="slider__tab" type="button" aria-label="Zobrazit projekt Masná">
+            <span class="slider__num">02</span> Masná
+            <span class="slider__bar" aria-hidden="true"></span>
+          </button>
+          <button class="slider__tab" type="button" aria-label="Zobrazit projekt Brod nad Dyjí">
+            <span class="slider__num">03</span> Brod nad Dyjí
+            <span class="slider__bar" aria-hidden="true"></span>
+          </button>
+          <button class="slider__tab" type="button" aria-label="Zobrazit projekt Říčany u Brna">
+            <span class="slider__num">04</span> Říčany u Brna
+            <span class="slider__bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PŘIPRAVUJEME ============ -->
+    <section class="section" id="projekty">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Připravujeme</span>
+          <h2 class="h2">Na čem právě pracujeme</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="tiles">
+          <a class="next-project reveal" href="rezidence-v-chaloupkach.html">
+            <img src="assets/img/chaloupky/cover-1600.jpg" alt="Vizualizace vnitrobloku bytových vil Rezidence V Chaloupkách" width="1600" height="725" loading="lazy">
+            <div class="next-project__body">
+              <span>V přípravě</span>
+              <h3 class="h3">Rezidence V Chaloupkách →</h3>
+            </div>
+          </a>
+          <a class="next-project reveal" style="--reveal-delay: .12s" href="masna.html">
+            <img src="assets/img/masna/cover-1600.jpg" alt="Pracovní vizualizace bytového domu Masná v Brně" width="1600" height="821" loading="lazy">
+            <div class="next-project__body">
+              <span>V přípravě</span>
+              <h3 class="h3">Masná →</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOKONČENÉ PROJEKTY ============ -->
+    <section class="section" id="dokoncene" style="padding-top: 0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Reference</span>
+          <h2 class="h2">Co jsme postavili</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="tiles">
+          <a class="next-project reveal" href="brod-nad-dyji.html">
+            <img src="assets/img/brod/cover-1600.jpg" alt="Moderní rodinný dům s dřevěnými detaily v Brodu nad Dyjí" width="1600" height="1067" loading="lazy">
+            <div class="next-project__body">
+              <span>Dokončeno · Vyprodáno</span>
+              <h3 class="h3">Brod nad Dyjí →</h3>
+            </div>
+          </a>
+          <a class="next-project reveal" style="--reveal-delay: .12s" href="ricany-u-brna.html">
+            <img src="assets/img/ricany/cover-1600.jpg" alt="Řadové rodinné domy s dřevěnými slunolamy v Říčanech u Brna" width="1600" height="1067" loading="lazy">
+            <div class="next-project__body">
+              <span>Dokončeno · Vyprodáno</span>
+              <h3 class="h3">Říčany u Brna →</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKUPINA ============ -->
+    <section class="group section" id="skupina">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Skupina Amici vinum</span>
+          <h2 class="h2">Jedna skupina, vlastní společnost pro&nbsp;každý projekt</h2>
+          <div class="divider"></div>
+          <p class="lead" style="margin-top: 1.6rem">Stavíme pod hlavičkou skupiny Amici vinum. Každý projekt má svou vlastní projektovou společnost — od&nbsp;prvního dne je&nbsp;tak jasné, kdo projekt vlastní, kdo ho&nbsp;financuje a&nbsp;kdo za&nbsp;ním stojí. Pro kupující transparentní a&nbsp;bezpečný model.</p>
+        </div>
+
+        <div class="g-cards">
+          <div class="g-card g-card--parent reveal">
+            <span class="g-card__tag">Mateřská společnost</span>
+            <strong>Amici vinum s.r.o.</strong>
+            <p>Srdce skupiny. Určuje, kam skupina míří, vlastní projektové společnosti a&nbsp;ručí za&nbsp;to, že&nbsp;každý projekt dotáhneme ve&nbsp;stejné kvalitě — od&nbsp;prvního výkresu po&nbsp;předání klíčů.</p>
+            <p class="g-card__meta">IČO 22200100 · Rašínova 103/2, 602&nbsp;00 Brno · jednatelé Mgr.&nbsp;Radovan Vrbka a&nbsp;Ing.&nbsp;Jakub Kubík</p>
+          </div>
+
+          <div class="g-grid">
+            <div class="g-card reveal">
+              <span class="g-card__tag">Servisní společnost</span>
+              <strong>Amici vinum servisní s.r.o.</strong>
+              <p>Tým, který odvádí každodenní práci: vyhledává pozemky a&nbsp;příležitosti, vede projekty povolováním, koordinuje architekty i&nbsp;dodavatele a&nbsp;zajišťuje služby pro celou skupinu.</p>
+            </div>
+            <div class="g-card reveal" style="--reveal-delay: .08s">
+              <span class="g-card__tag">Projektová společnost</span>
+              <strong>Rezidence V&nbsp;Chaloupkách s.r.o.</strong>
+              <p>Nese připravovaný projekt bytových vil <a href="rezidence-v-chaloupkach.html">Rezidence V&nbsp;Chaloupkách</a> v&nbsp;Brně-Komíně — od&nbsp;přípravy přes výstavbu až&nbsp;po&nbsp;prodej bytů.</p>
+              <span class="g-status">Projekt v&nbsp;přípravě</span>
+            </div>
+            <div class="g-card reveal" style="--reveal-delay: .16s">
+              <span class="g-card__tag">Projektová společnost</span>
+              <strong>MASNÁ - SPV s.r.o.</strong>
+              <p>Nese připravovaný projekt <a href="masna.html">Masná</a> v&nbsp;Brně — kompaktní jednotky 1+kk a&nbsp;ateliéry kousek od&nbsp;centra.</p>
+              <p class="g-card__meta">IČO 24049492 · Masná 444/102, Brno</p>
+              <span class="g-status">Projekt v&nbsp;přípravě</span>
+            </div>
+            <div class="g-card g-card--future reveal" style="--reveal-delay: .24s">
+              <span class="g-plus" aria-hidden="true">+</span>
+              <strong>Další projekty přijdou</strong>
+              <p>Aktivně hledáme nové lokality. Každý budoucí projekt dostane vlastní projektovou společnost — a&nbsp;tady už&nbsp;jí&nbsp;držíme místo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="g-steps reveal">
+          <div class="g-step">
+            <span class="num">01</span>
+            <h3>Objevíme příležitost</h3>
+            <p>Servisní tým najde lokalitu s&nbsp;potenciálem a&nbsp;připraví projekt k&nbsp;realizaci.</p>
+          </div>
+          <div class="g-step">
+            <span class="num">02</span>
+            <h3>Projekt dostane vlastní firmu</h3>
+            <p>Založíme projektovou společnost plně vlastněnou mateřskou společností.</p>
+          </div>
+          <div class="g-step">
+            <span class="num">03</span>
+            <h3>Stavíme a&nbsp;prodáváme</h3>
+            <p>Výstavbu i&nbsp;prodej řídíme vlastním týmem pod dohledem skupiny.</p>
+          </div>
+          <div class="g-step">
+            <span class="num">04</span>
+            <h3>Předáme domovy</h3>
+            <p>Dokončený projekt předáme majitelům a&nbsp;zůstává trvalou referencí skupiny.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section" id="kontakt">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="reveal">
+            <span class="eyebrow">Kontakt</span>
+            <div class="divider"></div>
+            <div class="contact__item" style="margin-top: 1.6rem">
+              <strong>E-mail</strong>
+              <!-- TODO: po založení nové schránky vyměnit adresu -->
+              <a class="contact__mail" href="mailto:Jakub.Kubik@avdevelop.cz">Jakub.Kubik@avdevelop.cz</a>
+            </div>
+            <p style="margin-top: 1.4rem; color: var(--muted)">AV&nbsp;Develop je značka developerské skupiny <strong>Amici vinum</strong>.</p>
+          </div>
+          <div class="contact__list reveal" style="--reveal-delay: .12s">
+            <div class="contact__item">
+              <strong>Jednatelé</strong>
+              <p>Mgr.&nbsp;Radovan Vrbka<br>Ing.&nbsp;Jakub Kubík</p>
+            </div>
+            <div class="contact__item">
+              <strong>Sídlo</strong>
+              <p>Amici vinum s.r.o.<br>Rašínova 103/2, 602&nbsp;00 Brno</p>
+            </div>
+            <div class="contact__item">
+              <strong>IČO</strong>
+              <p>22200100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#" aria-label="AV Develop – úvod">
+          <img src="assets/img/logo/logo-white.svg" alt="AV Develop" width="136" height="52" loading="lazy">
+        </a>
+        <nav class="footer__nav" aria-label="Patičková navigace">
+          <a href="rezidence-v-chaloupkach.html">V Chaloupkách</a>
+          <a href="masna.html">Masná</a>
+          <a href="brod-nad-dyji.html">Brod nad Dyjí</a>
+          <a href="ricany-u-brna.html">Říčany u Brna</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 AV Develop · Amici vinum s.r.o. · IČO 22200100 · Rašínova 103/2, 602&nbsp;00 Brno</p>
+        <p><a href="mailto:Jakub.Kubik@avdevelop.cz">Jakub.Kubik@avdevelop.cz</a></p>
+      </div>
+      <p class="footer__note">Tento web používá pouze nezbytné technické cookies. Žádné analytické ani marketingové cookies nesbíráme.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
